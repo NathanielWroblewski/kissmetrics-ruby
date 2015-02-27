@@ -19,6 +19,14 @@ module KISSmetrics
       metric: {
         path: '/metrics',
         api: CORE_API
+      },
+      property: {
+        path: '/properties',
+        api: CORE_API
+      },
+      report: {
+        path: '/reports',
+        api: CORE_API
       }
     }
 

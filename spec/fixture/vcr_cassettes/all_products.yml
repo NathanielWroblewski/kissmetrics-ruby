@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.kissmetrics.com/core/products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - KISSmetrics-ruby 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Authorization:
+      - Bearer g69tAwVa2PXJS5KBzz5lWKgBkAzERYIR9XGoS2VkWUz4vnT_qZVIW6ehkPjIGmga
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Feb 2015 03:30:46 GMT
+      Etag:
+      - '"27e47596570dcc73a4bd5cc450ff40c5"'
+      Link:
+      - <https://api.kissmetrics.com/core/products?limit=20&offset=0>; rel="self";
+        templated="false",<https://api.kissmetrics.com/core/products/{product_id}/reports>;
+        rel="reports"; templated="true",<https://api.kissmetrics.com/core/products/{product_id}/metrics>;
+        rel="metrics"; templated="true",<https://api.kissmetrics.com/core/products/{product_id}/events>;
+        rel="events"; templated="true",<https://api.kissmetrics.com/core/products/{product_id}/properties>;
+        rel="properties"; templated="true",<https://api.kissmetrics.com/core/products?limit=20&offset=0>;
+        rel="first"; templated="false",<https://api.kissmetrics.com/core/products?limit=20&offset=0>;
+        rel="last"; templated="false"
+      Server:
+      - nginx/1.6.2
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - 06ac5e57-503c-48f8-9285-168a3dae5697
+      X-Runtime:
+      - '0.103315'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"status":200},"data":[{"id":"8d6722b0-a04f-0132-83a0-22000ab4dcd7","account_id":"8d637290-a04f-0132-83a0-22000ab4dcd7","name":"My
+        First Product","tracking_key":"aa7ef8c34e64003f07d458853efd2acb50420dc1","url":null,"status":"active","environment":"","timezone":"UTC","created_at":"2015-02-27T01:40:37+00:00","hosts":[],"links":[{"name":"Self","rel":"self","href":"https://api.kissmetrics.com/core/products/8d6722b0-a04f-0132-83a0-22000ab4dcd7","templated":false},{"name":"Account","rel":"account","href":"https://api.kissmetrics.com/core/accounts/8d637290-a04f-0132-83a0-22000ab4dcd7","templated":false},{"name":"Product
+        Reports","rel":"reports","href":"https://api.kissmetrics.com/core/products/8d6722b0-a04f-0132-83a0-22000ab4dcd7/reports","templated":false},{"name":"Product
+        Metrics","rel":"metrics","href":"https://api.kissmetrics.com/core/products/8d6722b0-a04f-0132-83a0-22000ab4dcd7/metrics","templated":false},{"name":"Product
+        Events","rel":"events","href":"https://api.kissmetrics.com/core/products/8d6722b0-a04f-0132-83a0-22000ab4dcd7/events","templated":false},{"name":"Product
+        Properties","rel":"properties","href":"https://api.kissmetrics.com/core/products/8d6722b0-a04f-0132-83a0-22000ab4dcd7/properties","templated":false}]}],"pagination":{"limit":20,"offset":0,"total":1},"links":[{"name":"Self","rel":"self","href":"https://api.kissmetrics.com/core/products?limit=20\u0026offset=0","templated":false},{"name":"Product
+        Reports","rel":"reports","href":"https://api.kissmetrics.com/core/products/{product_id}/reports","templated":true},{"name":"Product
+        Metrics","rel":"metrics","href":"https://api.kissmetrics.com/core/products/{product_id}/metrics","templated":true},{"name":"Product
+        Events","rel":"events","href":"https://api.kissmetrics.com/core/products/{product_id}/events","templated":true},{"name":"Product
+        Properties","rel":"properties","href":"https://api.kissmetrics.com/core/products/{product_id}/properties","templated":true},{"name":"First","rel":"first","href":"https://api.kissmetrics.com/core/products?limit=20\u0026offset=0","templated":false},{"name":"Last","rel":"last","href":"https://api.kissmetrics.com/core/products?limit=20\u0026offset=0","templated":false}]}'
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 03:30:46 GMT
+recorded_with: VCR 2.9.3

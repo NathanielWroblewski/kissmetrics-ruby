@@ -35,4 +35,3 @@ describe KISSmetrics::Account, '.products' do
     end
   end
 end
-
