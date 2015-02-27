@@ -40,6 +40,7 @@ end
 
 |Description|Implementation|
 |---|---|
+|Fetch all accounts|`KISSmetrics::Account.all`|
 |Fetch single account|`KISSmetrics::Account.find('8d637290-a04f-0132-83a0-22000ab4dcd7')`|
 
 ## Contributing

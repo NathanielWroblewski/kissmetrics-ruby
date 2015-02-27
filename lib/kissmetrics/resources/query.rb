@@ -18,6 +18,10 @@ module KISSmetrics
       self.to_s.split('::').last.downcase.to_sym
     end
 
+    def all
+      self
+    end
+
     def find(id)
       query[:path] += id
       self

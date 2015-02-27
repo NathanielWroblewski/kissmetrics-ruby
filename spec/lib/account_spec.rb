@@ -29,10 +29,45 @@ describe KISSmetrics::Account, '.find' do
 
     response = KISSmetrics::Account.find(id)
 
-    response['data'] # kick the query
+    response.to_hash # kick the query
 
     expect(connection).to have_received(:get).with(
       "/core/accounts/#{id}",
+      {},
+      {
+        accept: 'application/json',
+        content_type: 'application/json; charset=UTF-8',
+        authorization: 'Bearer ' + ENV['KISSMETRICS_API_KEY']
+      }
+    )
+  end
+end
+
+describe KISSmetrics::Account, '.all' do
+  let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
+  let(:connection) { double(:faraday_connection).as_null_object }
+
+  after :each do
+    KISSmetrics::Account.inspect # clear the query for other specs
+  end
+
+  it 'does not augment the default query' do
+    KISSmetrics::Account.all
+
+    expect(KISSmetrics::Account.query).to eq(
+      { path: '/core/accounts/', params: {} }
+    )
+  end
+
+  it 'makes a request for the all account the user has access to' do
+    KISSmetrics.stub(:connection).and_return(connection)
+
+    response = KISSmetrics::Account.all
+
+    response.to_hash # kick the query
+
+    expect(connection).to have_received(:get).with(
+      '/core/accounts/',
       {},
       {
         accept: 'application/json',
