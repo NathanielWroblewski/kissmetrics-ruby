@@ -19,5 +19,6 @@ RSpec.configure do |config|
     KISSmetrics::Event.to_hash
     KISSmetrics::Metric.to_hash
     KISSmetrics::Product.to_hash
+    KISSmetrics::Property.to_hash
   end
 end

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.kissmetrics.com/core/properties
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - KISSmetrics-ruby 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Authorization:
+      - Bearer g69tAwVa2PXJS5KBzz5lWKgBkAzERYIR9XGoS2VkWUz4vnT_qZVIW6ehkPjIGmga
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Feb 2015 03:51:09 GMT
+      Etag:
+      - '"efe322b626e4d6d3e3d46db484eb39d8"'
+      Link:
+      - <https://api.kissmetrics.com/core/properties?limit=20&offset=0>; rel="self";
+        templated="false",<https://api.kissmetrics.com/core/properties/{property_id}>;
+        rel="property-detail"; templated="true",<https://api.kissmetrics.com/core/properties?limit=20&offset=0>;
+        rel="first"; templated="false",<https://api.kissmetrics.com/core/properties?limit=20&offset=0>;
+        rel="last"; templated="false"
+      Server:
+      - nginx/1.6.2
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - e6a7f383-caf8-478f-8677-226ea443062b
+      X-Runtime:
+      - '0.060743'
+      Content-Length:
+      - '249'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"status":200},"data":[],"pagination":{"limit":20,"offset":0,"total":0},"links":[{"name":"Self","rel":"self","href":"https://api.kissmetrics.com/core/properties?limit=20\u0026offset=0","templated":false},{"name":"Property
+        Detail","rel":"property-detail","href":"https://api.kissmetrics.com/core/properties/{property_id}","templated":true},{"name":"First","rel":"first","href":"https://api.kissmetrics.com/core/properties?limit=20\u0026offset=0","templated":false},{"name":"Last","rel":"last","href":"https://api.kissmetrics.com/core/properties?limit=20\u0026offset=0","templated":false}]}'
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 03:51:09 GMT
+recorded_with: VCR 2.9.3

@@ -87,6 +87,13 @@ calling `#to_hash` on the response, or using any of the slice methods like
 |Fetch product properties|`KISSmetrics::Product.find('24e087bd-d318-4304-8ec8-ecdaec8817a1').properties`|
 |Fetch product reports|`KISSmetrics::Product.find('24e087bd-d318-4304-8ec8-ecdaec8817a1').reports`|
 
+**Properties**
+
+|Description|Implementation|
+|---|---|
+|Fetch all properties|`KISSmetrics::Property.all`|
+|Fetch single property|`KISSmetrics::Property.find('24e087bd-d318-4304-8ec8-ecdaec8817a1')`|
+
 ## Contributing
 
 1. [Fork it](https://github.com/nathanielwroblewski/kissmetrics-ruby/fork)

@@ -7,7 +7,7 @@ describe KISSmetrics::Event, '.find' do
     VCR.use_cassette(:find_event) do
       response = KISSmetrics::Event.find(id)
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end

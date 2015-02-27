@@ -7,7 +7,7 @@ describe KISSmetrics::Product, '.find' do
     VCR.use_cassette(:find_product) do
       response = KISSmetrics::Product.find(id)
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end
@@ -19,7 +19,7 @@ describe KISSmetrics::Product, '.all' do
     VCR.use_cassette(:all_products) do
       response = KISSmetrics::Product.all
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end
@@ -31,7 +31,7 @@ describe KISSmetrics::Product, '.events' do
     VCR.use_cassette(:product_events) do
       response = KISSmetrics::Product.find(id).events
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end
@@ -43,7 +43,7 @@ describe KISSmetrics::Product, '.metrics' do
     VCR.use_cassette(:product_metrics) do
       response = KISSmetrics::Product.find(id).metrics
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end
@@ -55,7 +55,7 @@ describe KISSmetrics::Product, '.properties' do
     VCR.use_cassette(:product_properties) do
       response = KISSmetrics::Product.find(id).properties
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end

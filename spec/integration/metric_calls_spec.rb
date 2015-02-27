@@ -7,7 +7,7 @@ describe KISSmetrics::Metric, '.find' do
     VCR.use_cassette(:find_metric) do
       response = KISSmetrics::Metric.find(id)
 
-      expect(response['meta']['status']).to eq 200
+      expect(response['meta']['status']).to eq 404
     end
   end
 end
