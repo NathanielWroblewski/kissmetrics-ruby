@@ -11,6 +11,10 @@ module KISSmetrics
       product: {
         path: '/products',
         api: CORE_API
+      },
+      event: {
+        path: '/events',
+        api: CORE_API
       }
     }
 

@@ -14,5 +14,8 @@ RSpec.configure do |config|
       km.api_key = ENV['KISSMETRICS_API_KEY']
       km.version = nil
     end
+
+    KISSmetrics::Account.to_hash
+    KISSmetrics::Event.to_hash
   end
 end

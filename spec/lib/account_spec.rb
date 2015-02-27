@@ -12,10 +12,6 @@ describe KISSmetrics::Account, '.find' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
   let(:connection) { double(:faraday_connection).as_null_object }
 
-  after :each do
-    KISSmetrics::Account.inspect # clear the query for other specs
-  end
-
   it 'adds a single specific account to the path' do
     KISSmetrics::Account.find(id)
 
@@ -47,10 +43,6 @@ describe KISSmetrics::Account, '.all' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
   let(:connection) { double(:faraday_connection).as_null_object }
 
-  after :each do
-    KISSmetrics::Account.inspect # clear the query for other specs
-  end
-
   it 'does not augment the default query' do
     KISSmetrics::Account.all
 
@@ -81,10 +73,6 @@ end
 describe KISSmetrics::Account, '.products' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
   let(:connection) { double(:faraday_connection).as_null_object }
-
-  after :each do
-    KISSmetrics::Account.inspect # clear the query for other specs
-  end
 
   it 'appends products to the query' do
     KISSmetrics::Account.find(id).products

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.kissmetrics.com/core/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - KISSmetrics-ruby 0.0.1
+      Content-Type:
+      - application/json; charset=UTF-8
+      Authorization:
+      - Bearer g69tAwVa2PXJS5KBzz5lWKgBkAzERYIR9XGoS2VkWUz4vnT_qZVIW6ehkPjIGmga
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 27 Feb 2015 03:03:48 GMT
+      Etag:
+      - '"af931434295d0b79d8e21e3895630257"'
+      Link:
+      - <https://api.kissmetrics.com/core/events?limit=20&offset=0>; rel="self"; templated="false",<https://api.kissmetrics.com/core/events/{event_id}>;
+        rel="event-detail"; templated="true",<https://api.kissmetrics.com/core/events?limit=20&offset=0>;
+        rel="first"; templated="false",<https://api.kissmetrics.com/core/events?limit=20&offset=0>;
+        rel="last"; templated="false"
+      Server:
+      - nginx/1.6.2
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Request-Id:
+      - a3986386-3d9d-462d-ad07-a9d5530d3b53
+      X-Runtime:
+      - '0.100901'
+      Content-Length:
+      - '241'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"status":200},"data":[],"pagination":{"limit":20,"offset":0,"total":0},"links":[{"name":"Self","rel":"self","href":"https://api.kissmetrics.com/core/events?limit=20\u0026offset=0","templated":false},{"name":"Event
+        Detail","rel":"event-detail","href":"https://api.kissmetrics.com/core/events/{event_id}","templated":true},{"name":"First","rel":"first","href":"https://api.kissmetrics.com/core/events?limit=20\u0026offset=0","templated":false},{"name":"Last","rel":"last","href":"https://api.kissmetrics.com/core/events?limit=20\u0026offset=0","templated":false}]}'
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 03:03:48 GMT
+recorded_with: VCR 2.9.3

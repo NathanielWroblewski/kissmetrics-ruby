@@ -1,6 +1,7 @@
 require 'kissmetrics/version'
 require 'kissmetrics/api_interface/endpoints'
 require 'kissmetrics/resources/account'
+require 'kissmetrics/resources/event'
 require 'kissmetrics/resources/query'
 require 'kissmetrics/http/connection'
 require 'kissmetrics/http/request'

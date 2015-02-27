@@ -15,7 +15,7 @@ module KISSmetrics
     end
 
     def parent_class
-      self.to_s.split('::').last.downcase.to_sym
+      to_s.split('::').last.downcase.to_sym
     end
 
     def all
