@@ -42,12 +42,17 @@ The follow table organizes all endpoints and methods that this gem supports.
 For more details on the KISSmetrics API, see their official documentation.
 
 As in ActiveRecord, methods are chainable and order-independent, i.e.
-`KISSmetrics::Account.last(10).offset(5)` would return the same results as
-`KISSmetrics::Account.offset(5).last(10)` (if you could call `#last` or
-`#offset` on an account resource).  All results need to be 'kicked' to
-make an actual API call.  You can kick any API call by inspecting the response,
+the following calls are equivalent:
+
+  - `KISSmetrics::Account.last(10).offset(5)`
+  - `KISSmetrics::Account.offset(5).last(10)`
+
+All results need to be 'kicked' to make an actual API call.  You can kick any
+API call by inspecting the response (automatically done in a REPL),
 calling `#to_hash` on the response, or using any of the slice methods like
 `response['meta']`.
+
+## Supported Methods
 
 |Description|Implementation|
 |---|---|
