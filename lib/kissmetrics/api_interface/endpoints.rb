@@ -1,7 +1,17 @@
 module KISSmetrics
   module Endpoints
+    CORE_API = '/core'
+    QUERY_API = '/query'
+
     ENDPOINTS = {
-      account: '/core/accounts/'
+      account: {
+        path: '/accounts',
+        api:  CORE_API
+      },
+      product: {
+        path: '/products',
+        api: CORE_API
+      }
     }
 
     def base_url
@@ -10,6 +20,10 @@ module KISSmetrics
 
     def version_path
       ''
+    end
+
+    def endpoint_for(resource)
+      ENDPOINTS[resource][:api] + ENDPOINTS[resource][:path]
     end
   end
 end

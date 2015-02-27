@@ -11,7 +11,7 @@ module KISSmetrics
     end
 
     def default_query
-      { path: ENDPOINTS[parent_class], params: {} }
+      { path: endpoint_for(parent_class), params: {} }
     end
 
     def parent_class
@@ -23,7 +23,7 @@ module KISSmetrics
     end
 
     def find(id)
-      query[:path] += id
+      query[:path] += "/#{id}"
       self
     end
 
@@ -36,7 +36,6 @@ module KISSmetrics
     end
 
     def limit(limit)
-      query[:path] = ENDPOINTS[parent_class] + ENDPOINTS[:latest]
       query[:params][:limit] = limit
       self
     end

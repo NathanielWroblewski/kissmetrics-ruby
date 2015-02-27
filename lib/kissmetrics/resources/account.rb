@@ -6,9 +6,8 @@ module KISSmetrics
     extend KISSmetrics::Query
     include KISSmetrics::Endpoints
 
-    def self.unspents
-      query[:path] += ENDPOINTS[:unspents]
-      query[:path].squeeze!('/')
+    def self.products
+      query[:path] += ENDPOINTS[:product][:path]
       self
     end
   end
