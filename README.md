@@ -61,6 +61,8 @@ calling `#to_hash` on the response, or using any of the slice methods like
 |Fetch account products|`KISSmetrics::Account.find('8d637290-a04f-0132-83a0-22000ab4dcd7').products`|
 |Fetch all events|`KISSmetrics::Event.all`|
 |Fetch single event|`KISSmetrics::Event.find('9941ed8e-7733-4e59-8c06-1e98a35c8b85')`|
+|Fetch all metrics|`KISSmetrics::Metric.all`|
+|Fetch single metric|`KISSmetrics::Metric.find('6b95437d-46e1-438e-8976-a4c5b0132399')`|
 
 ## Contributing
 

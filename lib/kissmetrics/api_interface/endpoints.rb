@@ -15,6 +15,10 @@ module KISSmetrics
       event: {
         path: '/events',
         api: CORE_API
+      },
+      metric: {
+        path: '/metrics',
+        api: CORE_API
       }
     }
 

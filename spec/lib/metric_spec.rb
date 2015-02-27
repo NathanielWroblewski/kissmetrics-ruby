@@ -1,34 +1,34 @@
 require 'spec_helper'
 
-describe KISSmetrics::Event, '.query' do
+describe KISSmetrics::Metric, '.query' do
   it 'defaults to the query hash' do
-    expect(KISSmetrics::Event.query).to eq(
-      { path: '/core/events', params: {} }
+    expect(KISSmetrics::Metric.query).to eq(
+      { path: '/core/metrics', params: {} }
     )
   end
 end
 
-describe KISSmetrics::Event, '.find' do
+describe KISSmetrics::Metric, '.find' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
   let(:connection) { double(:faraday_connection).as_null_object }
 
-  it 'adds a single specific event to the path' do
-    KISSmetrics::Event.find(id)
+  it 'adds a single specific metric to the path' do
+    KISSmetrics::Metric.find(id)
 
-    expect(KISSmetrics::Event.query).to eq(
-      { path: "/core/events/#{id}", params: {} }
+    expect(KISSmetrics::Metric.query).to eq(
+      { path: "/core/metrics/#{id}", params: {} }
     )
   end
 
-  it 'makes a request for the given event' do
+  it 'makes a request for the given metric' do
     KISSmetrics.stub(:connection).and_return(connection)
 
-    response = KISSmetrics::Event.find(id)
+    response = KISSmetrics::Metric.find(id)
 
     response.to_hash # kick the query
 
     expect(connection).to have_received(:get).with(
-      "/core/events/#{id}",
+      "/core/metrics/#{id}",
       {},
       {
         accept: 'application/json',
@@ -39,27 +39,27 @@ describe KISSmetrics::Event, '.find' do
   end
 end
 
-describe KISSmetrics::Event, '.all' do
+describe KISSmetrics::Metric, '.all' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
   let(:connection) { double(:faraday_connection).as_null_object }
 
   it 'does not augment the default query' do
-    KISSmetrics::Event.all
+    KISSmetrics::Metric.all
 
-    expect(KISSmetrics::Event.query).to eq(
-      { path: '/core/events', params: {} }
+    expect(KISSmetrics::Metric.query).to eq(
+      { path: '/core/metrics', params: {} }
     )
   end
 
-  it 'makes a request for all events the user has access to' do
+  it 'makes a request for all metrics the user has access to' do
     KISSmetrics.stub(:connection).and_return(connection)
 
-    response = KISSmetrics::Event.all
+    response = KISSmetrics::Metric.all
 
     response.to_hash # kick the query
 
     expect(connection).to have_received(:get).with(
-      '/core/events',
+      '/core/metrics',
       {},
       {
         accept: 'application/json',
@@ -70,7 +70,7 @@ describe KISSmetrics::Event, '.all' do
   end
 end
 
-describe KISSmetrics::Event, 'inspect' do
+describe KISSmetrics::Metric, 'inspect' do
   let(:id) { '240cf230-0624-0132-b634-22000a9f1c0f' }
 
   before :each do
@@ -78,10 +78,10 @@ describe KISSmetrics::Event, 'inspect' do
   end
 
   it 'resets the query' do
-    KISSmetrics::Event.find(id).inspect
+    KISSmetrics::Metric.find(id).inspect
 
-    expect(KISSmetrics::Event.query).to eq({
-      path: '/core/events',
+    expect(KISSmetrics::Metric.query).to eq({
+      path: '/core/metrics',
       params: {}
     })
   end
