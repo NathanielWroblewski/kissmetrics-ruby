@@ -38,7 +38,7 @@ end
 
 ## Usage
 
-The follow table organizes all endpoints and methods that this gem supports.
+The following table organizes all endpoints and methods that this gem supports.
 For more details on the KISSmetrics API, see their official documentation.
 
 As in ActiveRecord, methods are chainable and order-independent, i.e.
